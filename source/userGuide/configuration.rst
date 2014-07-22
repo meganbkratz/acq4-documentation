@@ -30,7 +30,7 @@ It is important to first understand that a 'configuration' is a single document,
 ::
     
     storageDir: "/home/user/data"
-    protocolDir: "config/protocols"
+    defaultCompression: None
     
 In the example above, the name "storageDir" is assigned the value "/home/user/data".
 Values may also contain nested lists of name:value pairs:
@@ -61,6 +61,8 @@ Further notes about this syntax:
     * You can use "double" or 'single' quotes, but not "both'
     * File or directory names should be quoted and use forward slashes (/) on Linux and OSX or double-back slashes (\\\\) on Windows (eg "/home/user/data" or "C:\\\\data\\\\user").
     * Some options will call for a list of values. This can be given just by separating the values with commas inline like ``value1, value2`` or with brackets like ``[value1, value2]``
+    * All values are evaluated as Python expressions and basic unit symbols are provided, 
+      so it is possible to include mathematical expressions like ``scale: (200 * pA) / (100 * mV)`` 
     * Finally, you may add comments to .cfg if they are preceded with a hash (#) symbol
     
     

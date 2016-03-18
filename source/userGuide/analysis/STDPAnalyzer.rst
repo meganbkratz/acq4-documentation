@@ -2,6 +2,7 @@ STDP Analyzer
 =============
 
 The STDP Analyzer is designed to do analysis of spike-timing-dependent plasticity experiments collected in ACQ4. It includes support for:
+    
     * viewing traces over the timecourse of an experiment
     * averaging across individual traces
     * measuring the maximal slope of a PSP in a given region
@@ -9,6 +10,8 @@ The STDP Analyzer is designed to do analysis of spike-timing-dependent plasticit
     * measuring the time between the PSP and action potential during the conditioning protocol
     * storing analysis results to an analysis database
     * creating summary sheets both with and without plasticity information
+
+Data must be collected using the TaskRunner module with protocols similar to those included in the example configuration under `acq4/config/example/protocols/STDP/`.
 
 Overview
 --------
